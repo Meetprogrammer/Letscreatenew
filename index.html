@@ -41,44 +41,25 @@ h1 {
   </style>
 </head>
 <body>
-  <h1>LEARN <span id="typed1" class="typed"></span></h1>
-  <h1>AND <span id="typed2" class="typed"></span></h1>
-  <h1>ENJOY <span id="typed3" class="typed"></span></h1>
-
+  <h1>LEARN <span id="typed" class="typed"></span></h1>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
   <script>
-    $(function() {
-      var typed1 = new Typed('#typed1', {
-        strings: ["MEET", "CODEPEN", "HTML5", "JAVASCRIPT", "CSS"],
-        typeSpeed: 100,
-        backDelay: 1500,
-        loop: true,
-        onStringTyped: function(index) {
-          typed2.start();
-        }
-      });
-
-      var typed2 = new Typed('#typed2', {
-        strings: ["REACT", "RESPONSIVE", "SASS", "POSTCSS", "ES2015"],
-        typeSpeed: 100,
-        backDelay: 1500,
-        loop: true,
-        onStringTyped: function(index) {
-          typed3.start();
-        }
-      });
-
-      var typed3 = new Typed('#typed3', {
-        strings: ["AWESOME", "FUN", "EXCITING"],
-        typeSpeed: 100,
-        backDelay: 1500,
-        loop: true,
-        onStringTyped: function(index) {
-          typed1.start();
-        }
-      });
-    });
+   /*
+  Thanlks for fixes @tripu
+  https://codepen.io/nucliweb/details/eJPeYV#comment-id-226740
+*/
+$(function() {
+  new Typed('#typed', {
+		strings: ["MEET",   "CODEPEN","HTML5","JAVASCRIPT","CSS", "REACT", "RESPONSIVE", "SASS", "POSTCSS","ES2015"],
+		typeSpeed: 100,
+    backDelay: 1500,
+    loop: true,
+    callback: function(){}
+	});
+});
+ 
   </script>
 </body>
 </html>
